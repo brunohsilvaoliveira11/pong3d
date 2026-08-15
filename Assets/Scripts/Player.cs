@@ -5,7 +5,7 @@ public class Player : MonoBehaviour
 {
     private Rigidbody rb;
     private Vector3 moveInput;
-    [SerializeField] private float moveSpeed = 6f;
+    public float moveSpeed = 60f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     {
         if (rb != null)
         {
-            moveInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            moveInput = new Vector3(0, Input.GetAxis("Vertical"), 0);
             rb.MovePosition(rb.position + moveInput * moveSpeed * Time.fixedDeltaTime);
         }
     }
