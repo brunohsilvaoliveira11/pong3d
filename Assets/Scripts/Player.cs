@@ -5,7 +5,7 @@ public class Player : MonoBehaviour
 {
     private Rigidbody rb;
     private Vector3 moveInput;
-    public float moveSpeed = 60f;
+    public float moveSpeed = 120f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
